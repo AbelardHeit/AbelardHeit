@@ -1,0 +1,64 @@
+public class qwe {
+    public static void main(String[] args)
+            throws java.io.IOException {
+        char ignore, a;
+        for (; ; ) {
+            do {
+                System.out.println("Здравствуйте, о каком операторе вы хотите узнать?");
+                System.out.println("1. Оператор if.");
+                System.out.println("2. Оператор switch.");
+                System.out.println("3. Оператор while.");
+                System.out.println("4. Оператор do-while.");
+                System.out.println("5. Оператор for.");
+                System.out.println("6. Оператор break.");
+                System.out.println("7. Оператор continue.");
+                System.out.print("Выберите (q - выход): ");
+                a = (char) System.in.read();
+                do {
+                    ignore = (char) System.in.read();
+                } while (ignore != '\n');
+                if (a < '1' | a > '7' & a != 'q') System.out.println("Вы выбрали несуществующий пункт меню.");
+            } while (a < '1' | a > '7' & a != 'q');
+            if (a == 'q') break;
+            switch (a) {
+                case '1':
+                    System.out.println("Оператор if:\n");
+                    System.out.println("if (условие) оператор;");
+                    System.out.println("else оператор;\n");
+                    break;
+                case '2':
+                    System.out.println("Oпepaтop switch:\n");
+                    System.out.println("switch (выражение) {");
+                    System.out.println(" case константа:");
+                    System.out.println(" последовательность операторов");
+                    System.out.println(" break;");
+                    System.out.println(" // ... ");
+                    System.out.println("}\n");
+                    break;
+                case '3':
+                    System.out.println("Oпepaтop for:\n");
+                    System.out.print("for(init; условие; итерация}");
+                    System.out.println(" оператор;\n");
+                    break;
+                case '4':
+                    System.out.println("Oпepaтop while:\n");
+                    System.out.println("while(ycлoвиe) оператор;\n");
+                    break;
+                case '5':
+                    System.out.println("Oпepaтop do-while:\n");
+                    System.out.println("do {");
+                    System.out.println(" оператор;");
+                    System.out.println("} while (условие);\n");
+                    break;
+                case '6':
+                    System.out.println("Oпepaтop break:\n");
+                    System.out.println("break; или break метка;\n");
+                    break;
+                case '7':
+                    System.out.println("Oпepaтop continue:\n");
+                    System.out.println("continue; или continue метка;\n");
+                    break;
+            }
+        }
+    }
+}
